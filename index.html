@@ -260,6 +260,44 @@
   }
   @media (prefers-reduced-motion: reduce){ .map-pulse{ animation:none; } }
 
+  /* ---------- SIMPLIFIED PROCESS ---------- */
+  .process-card{
+    background: linear-gradient(155deg, var(--navy-2) 0%, #0a1a30 100%);
+    border:1px solid rgba(0,180,255,0.18);
+    border-radius:22px;
+    padding: 44px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items:center;
+  }
+  .process-text p{font-size:14.5px; color:var(--ink-soft); margin-bottom:22px; line-height:1.6;}
+  .process-text p strong{color:var(--white);}
+  .process-list{display:flex; flex-direction:column; gap:12px; margin-bottom:24px;}
+  .process-list-item{
+    display:flex; align-items:center; gap:12px;
+    background: rgba(0,180,255,0.06);
+    border:1px solid rgba(0,180,255,0.15);
+    border-radius:10px;
+    padding: 14px 16px;
+  }
+  .process-list-item i{color:var(--blue); font-size:19px; flex-shrink:0;}
+  .process-list-item span{font-size:14px; font-weight:600; color:var(--white);}
+
+  .process-steps{display:flex; flex-direction:column; gap:18px;}
+  .process-step{display:flex; gap:14px; align-items:flex-start;}
+  .process-step-num{
+    width:32px; height:32px; border-radius:9px; background:var(--blue); color:var(--navy);
+    font-family:var(--display); font-weight:800; font-size:14px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .process-step-text b{display:block; font-size:15px; color:var(--white); margin-bottom:3px;}
+  .process-step-text p{font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.5;}
+  .process-step-line{
+    width:1px; height:18px; background: rgba(0,180,255,0.25);
+    margin-left:16px;
+  }
+
   /* ---------- QUOTE FORM ---------- */
   .quote-section{
     position:relative;
@@ -374,6 +412,7 @@
     .why-grid{grid-template-columns: 1fr 1fr;}
     .zone-grid{grid-template-columns:1fr;}
     .quote-card{grid-template-columns:1fr; padding:30px 22px;}
+    .process-card{grid-template-columns:1fr; padding:30px 22px;}
     .nav-cta span{display:none;}
   }
   @media (max-width: 540px){
@@ -544,6 +583,47 @@
   </div>
 </section>
 
+<!-- SIMPLIFIED PROCESS -->
+<section class="section">
+  <div class="wrap">
+    <div class="process-card">
+      <div class="process-text">
+        <div class="section-eyebrow">Démarches simplifiées</div>
+        <h2 style="font-family:var(--display); font-weight:800; font-size:clamp(24px,2.8vw,30px); line-height:1.2; margin-bottom:16px;">On s'occupe de tout, vous n'avancez rien</h2>
+        <p>Chez D&D Prestige Pare-Brise, nous simplifions vos démarches. Il vous suffit de nous transmettre :</p>
+        <div class="process-list">
+          <div class="process-list-item">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="#00b4ff" stroke-width="1.7"/><circle cx="8" cy="12" r="2" stroke="#00b4ff" stroke-width="1.5"/><line x1="13" y1="9.5" x2="18" y2="9.5" stroke="#00b4ff" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="14.5" x2="18" y2="14.5" stroke="#00b4ff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>La carte grise du véhicule</span>
+          </div>
+          <div class="process-list-item">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 2.5h9l4 4v15H6V2.5z" stroke="#00b4ff" stroke-width="1.7" stroke-linejoin="round"/><path d="M15 2.5v4h4" stroke="#00b4ff" stroke-width="1.7" stroke-linejoin="round"/><line x1="9" y1="11" x2="16" y2="11" stroke="#00b4ff" stroke-width="1.4" stroke-linecap="round"/><line x1="9" y1="14.5" x2="16" y2="14.5" stroke="#00b4ff" stroke-width="1.4" stroke-linecap="round"/><line x1="9" y1="18" x2="13" y2="18" stroke="#00b4ff" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <span>Votre mémo assurance</span>
+          </div>
+        </div>
+        <p>Notre équipe se charge ensuite de la déclaration de bris de glace et du suivi administratif de votre dossier. Prenez simplement rendez-vous avec notre technicien, <strong>nous nous occupons du reste.</strong></p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-step-num">1</div>
+          <div class="process-step-text"><b>Vous transmettez vos documents</b><p>Carte grise et mémo assurance, en photo suffit.</p></div>
+        </div>
+        <div class="process-step-line"></div>
+        <div class="process-step">
+          <div class="process-step-num">2</div>
+          <div class="process-step-text"><b>Nous gérons la déclaration</b><p>Déclaration de bris de glace et suivi du dossier auprès de votre assurance.</p></div>
+        </div>
+        <div class="process-step-line"></div>
+        <div class="process-step">
+          <div class="process-step-num">3</div>
+          <div class="process-step-text"><b>Rendez-vous avec le technicien</b><p>Vous prenez rendez-vous, nous intervenons à domicile.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- QUOTE FORM -->
 <section class="section quote-section" id="devis">
   <div class="wrap">
@@ -626,7 +706,7 @@
         <a href="#devis"><i class="ti ti-map-pin" aria-hidden="true"></i> Île-de-France</a>
         <div class="footer-divider"></div>
         <div class="footer-social">
-          <a href="https://instagram.com/ddprestigepare-brise" target="_blank" rel="noopener" class="social-icon social-instagram" aria-label="Instagram D&D Prestige">
+          <a href="https://www.instagram.com/ddprestigeparebrise" target="_blank" rel="noopener" class="social-icon social-instagram" aria-label="Instagram D&D Prestige">
             <svg viewBox="0 0 24 24" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="1.8"/>
               <circle cx="12" cy="12" r="3.8" stroke="white" stroke-width="1.8"/>
